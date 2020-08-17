@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutMovie"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="25dp">
+
+    <ImageView
+        android:id="@+id/imgMovie"
+        android:layout_width="125dp"
+        android:layout_height="175dp"
+        android:src="@drawable/logo_film"/>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_toRightOf="@id/imgMovie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textSize="18dp"
+        android:textColor="#000"
+        android:text="JUDUL MOVIE"/>
+
+    <TextView
+        android:id="@+id/tvTanggal"
+        android:layout_toRightOf="@+id/imgMovie"
+        android:layout_below="@id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:maxLines="4"
+        android:text="dd-mm-yyyy"/>
+
+    <ImageView
+        android:id="@+id/imgRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tvTanggal"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="14dp"
+        android:src="@drawable/ic_baseline_star_border_24"/>
+
+    <TextView
+        android:id="@+id/tvRating"
+        android:layout_toRightOf="@+id/imgRating"
+        android:layout_below="@id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="16dp"
+        android:maxLines="4"
+        android:text="5.0"/>
+
+    <TextView
+        android:id="@+id/tvDeskripsi"
+        android:layout_toRightOf="@+id/imgMovie"
+        android:layout_below="@id/tvTanggal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:maxLines="4"
+        android:text="17030022 Rosalia Setia Nursanti"/>
+
+</RelativeLayout>

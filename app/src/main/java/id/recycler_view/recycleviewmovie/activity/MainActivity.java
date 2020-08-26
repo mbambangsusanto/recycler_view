@@ -1,7 +1,9 @@
 package id.recycler_view.recycleviewmovie.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
@@ -10,6 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+import id.recycler_view.recycleviewmovie.LoginActivity;
+import id.recycler_view.recycleviewmovie.Preferences;
 import id.recycler_view.recycleviewmovie.R;
 import id.recycler_view.recycleviewmovie.adapter.RecyclerMoviesAdapter;
 import id.recycler_view.recycleviewmovie.model.Response;
@@ -38,6 +42,16 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         
         panggilRetrofit();
+
+        findViewById(R.id.btn_logout).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Menghapus Status login dan kembali ke Login Activity
+                Preferences.clearLoggedInUser(getBaseContext());
+                startActivity(new Intent(getBaseContext(), LoginActivity.class));
+                finish();
+            }
+        });
     }
 
     private void panggilRetrofit() {

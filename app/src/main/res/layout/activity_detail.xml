@@ -12,7 +12,7 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/tvJudulDeskripsi"
+            android:id="@+id/txt_judul"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
@@ -24,17 +24,17 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imgMovieDeskripsi"
+            android:id="@+id/img_movie"
             android:layout_width="250dp"
             android:layout_height="300dp"
             android:layout_marginTop="20dp"
-            android:src="@drawable/logo_film"
+            android:src="@drawable/movie"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvJudulDeskripsi" />
+            app:layout_constraintTop_toBottomOf="@id/txt_judul" />
 
         <TextView
-            android:id="@+id/tvTanggalDeskrip"
+            android:id="@+id/txt_tgl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -42,19 +42,19 @@
             android:text="dd-mm-yyyy"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imgMovieDeskripsi" />
+            app:layout_constraintTop_toBottomOf="@id/img_movie" />
 
         <ImageView
-            android:id="@+id/imgRatingDeskrip"
+            android:id="@+id/img_rating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:src="@drawable/ic_baseline_star_border_24"
-            app:layout_constraintEnd_toStartOf="@id/tvRatingDeskrip"
-            app:layout_constraintTop_toBottomOf="@+id/tvTanggalDeskrip" />
+            app:layout_constraintEnd_toStartOf="@id/txt_rating"
+            app:layout_constraintTop_toBottomOf="@id/txt_tgl" />
 
         <TextView
-            android:id="@+id/tvRatingDeskrip"
+            android:id="@+id/txt_rating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -62,10 +62,10 @@
             android:text="5.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvTanggalDeskrip" />
+            app:layout_constraintTop_toBottomOf="@id/txt_tgl" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/txt_sinopsis"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -73,10 +73,10 @@
             android:text="OVERVIEW (SINOPSIS)"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvRatingDeskrip" />
+            app:layout_constraintTop_toBottomOf="@id/txt_rating" />
 
         <TextView
-            android:id="@+id/tvIsiDeskripsi"
+            android:id="@+id/txt_deskripsi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="16dp"
@@ -84,7 +84,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            app:layout_constraintTop_toBottomOf="@id/txt_sinopsis" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

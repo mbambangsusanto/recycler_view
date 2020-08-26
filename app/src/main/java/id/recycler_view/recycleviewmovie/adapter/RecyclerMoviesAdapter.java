@@ -63,7 +63,7 @@ public class RecyclerMoviesAdapter extends RecyclerView.Adapter<RecyclerMoviesAd
         holder.tvRating.setText(resultList.get(position).getVoteAverage().toString());
         Glide.with(mContext)
                 .load("https://image.tmdb.org/t/p/w185" + resultList.get(position).getPosterPath())
-                .into(holder.ivPoster);
+                .into(holder.img_poster);
     }
 
     @Override
@@ -72,19 +72,19 @@ public class RecyclerMoviesAdapter extends RecyclerView.Adapter<RecyclerMoviesAd
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        ImageView ivPoster,ivRating;
+        ImageView img_poster,imgRate;
         TextView tvTitle,tvDescription,tvTanggal,tvRating;
         RelativeLayout relativeLayout;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            ivPoster = itemView.findViewById(R.id.imgMovie);
-            ivRating = itemView.findViewById(R.id.imgRating);
-            tvTitle = itemView.findViewById(R.id.tvTitle);
-            tvDescription = itemView.findViewById(R.id.tvDeskripsi);
-            tvTanggal = itemView.findViewById(R.id.tvTanggal);
-            tvRating = itemView.findViewById(R.id.tvRating);
-            relativeLayout = itemView.findViewById(R.id.layoutMovie);
+            img_poster = itemView.findViewById(R.id.img_movie);
+            imgRate = itemView.findViewById(R.id.img_rating);
+            tvTitle = itemView.findViewById(R.id.txt_judul);
+            tvDescription = itemView.findViewById(R.id.txt_deskripsi);
+            tvTanggal = itemView.findViewById(R.id.txt_tgl);
+            tvRating = itemView.findViewById(R.id.txt_rating);
+            relativeLayout = itemView.findViewById(R.id.item_movie_layout);
         }
     }
 }

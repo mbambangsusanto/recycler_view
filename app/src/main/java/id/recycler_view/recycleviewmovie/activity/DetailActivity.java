@@ -18,7 +18,7 @@ public class DetailActivity extends AppCompatActivity {
     String image;
     String rating;
     ImageView imgDetail,imgRating;
-    TextView tvTitle, tvDetail, tvRating, tvTanggal;
+    TextView txtTitle, txtDetail, txtRating, txtTgl;
     Result result;
 
     @Override
@@ -26,12 +26,12 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        tvTitle = findViewById(R.id.tvJudulDeskripsi);
-        tvDetail = findViewById(R.id.tvIsiDeskripsi);
-        imgDetail = findViewById(R.id.imgMovieDeskripsi);
-        tvTanggal = findViewById(R.id.tvTanggalDeskrip);
-        tvRating = findViewById(R.id.tvRatingDeskrip);
-        imgRating = findViewById(R.id.imgRatingDeskrip);
+        txtTitle = findViewById(R.id.txt_judul);
+        txtDetail = findViewById(R.id.txt_deskripsi);
+        imgDetail = findViewById(R.id.img_movie);
+        txtTgl = findViewById(R.id.txt_tgl);
+        txtRating = findViewById(R.id.txt_rating);
+        imgRating = findViewById(R.id.img_rating);
 
         result = getIntent().getParcelableExtra(EXTRA_MOVIE);
 
@@ -41,10 +41,10 @@ public class DetailActivity extends AppCompatActivity {
         tanggal = result.getReleaseDate();
         image = result.getPosterPath();
 
-        tvTitle.setText(title);
-        tvDetail.setText(overview);
-        tvRating.setText(rating);
-        tvTanggal.setText(tanggal);
+        txtTitle.setText(title);
+        txtDetail.setText(overview);
+        txtRating.setText(rating);
+        txtTgl.setText(tanggal);
 
         Glide.with(getApplicationContext())
                 .load("https://image.tmdb.org/t/p/w185" + image)

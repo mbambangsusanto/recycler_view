@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/layoutMovie"
+    android:id="@+id/item_movie_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="25dp">
 
     <ImageView
-        android:id="@+id/imgMovie"
+        android:id="@+id/img_movie"
         android:layout_width="125dp"
         android:layout_height="175dp"
-        android:src="@drawable/logo_film"/>
+        android:src="@drawable/movie"/>
 
     <TextView
-        android:id="@+id/tvTitle"
-        android:layout_toRightOf="@id/imgMovie"
+        android:id="@+id/txt_judul"
+        android:layout_toRightOf="@id/img_movie"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -22,9 +22,9 @@
         android:text="JUDUL MOVIE"/>
 
     <TextView
-        android:id="@+id/tvTanggal"
-        android:layout_toRightOf="@+id/imgMovie"
-        android:layout_below="@id/tvTitle"
+        android:id="@+id/txt_tgl"
+        android:layout_toRightOf="@id/img_movie"
+        android:layout_below="@id/txt_judul"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -33,19 +33,19 @@
         android:text="dd-mm-yyyy"/>
 
     <ImageView
-        android:id="@+id/imgRating"
+        android:id="@+id/img_rating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/tvTanggal"
-        android:layout_below="@id/tvTitle"
+        android:layout_toRightOf="@+id/txt_tgl"
+        android:layout_below="@id/txt_judul"
         android:layout_marginStart="16dp"
         android:layout_marginTop="14dp"
         android:src="@drawable/ic_baseline_star_border_24"/>
 
     <TextView
-        android:id="@+id/tvRating"
-        android:layout_toRightOf="@+id/imgRating"
-        android:layout_below="@id/tvTitle"
+        android:id="@+id/txt_rating"
+        android:layout_toRightOf="@id/img_rating"
+        android:layout_below="@id/txt_judul"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
@@ -54,14 +54,14 @@
         android:text="5.0"/>
 
     <TextView
-        android:id="@+id/tvDeskripsi"
-        android:layout_toRightOf="@+id/imgMovie"
-        android:layout_below="@id/tvTanggal"
+        android:id="@+id/txt_deskripsi"
+        android:layout_toRightOf="@id/img_movie"
+        android:layout_below="@id/txt_tgl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:maxLines="4"
-        android:text="17030022 Rosalia Setia Nursanti"/>
+        android:text="15030022 M Bambang Susanto"/>
 
 </RelativeLayout>
